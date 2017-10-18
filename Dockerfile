@@ -1,5 +1,5 @@
-FROM gcc:4.9
-# FROM resin/armv7hf-debian:jessie
+# FROM gcc:4.9
+FROM resin/armv7hf-debian:jessie
 
 LABEL io.resin.device-type="beaglebone-green-wifi"
 
