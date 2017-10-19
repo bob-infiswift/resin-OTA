@@ -12,7 +12,7 @@
 #include <stdlib.h>
 
 int main(void) {
-	while (true)
+	while (1)
 	{
 		puts("Process 1"); /* prints !!!Hello World!!! */
 		sleep (1);
