@@ -19,8 +19,8 @@ RUN echo "deb [arch=armhf] http://repos.rcn-ee.net/debian/ jessie main" >> /etc/
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key D284E608A4C46402
 
-COPY ./src/hello /hello
+# COPY ./src/hello /hello
 # COPY . /hello
-WORKDIR /hello
+# WORKDIR /hello
 # RUN gcc -o hello hello.c
 # CMD ["./hello"]
