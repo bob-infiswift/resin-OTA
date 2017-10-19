@@ -24,3 +24,4 @@ WORKDIR /hello
 RUN gcc -o hello1 app-hello/hello.c
 RUN gcc -o hello2 app-hello2/hello2.c
 CMD ["./hello1"]
+CMD ["./hello2"]
