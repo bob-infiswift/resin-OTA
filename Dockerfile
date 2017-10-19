@@ -23,4 +23,4 @@ COPY ./src/hello /hello
 # COPY . /hello
 WORKDIR /hello
 # RUN gcc -o hello hello.c
-CMD ["./hello"]
+# CMD ["./hello"]
