@@ -1,5 +1,4 @@
-# FROM gcc:4.9
-FROM resin/armv7hf-debian:jessie
+FROM gcc:4.9
 
 LABEL io.resin.device-type="beaglebone-green-wifi"
 
@@ -19,8 +18,8 @@ RUN echo "deb [arch=armhf] http://repos.rcn-ee.net/debian/ jessie main" >> /etc/
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key D284E608A4C46402
 
-# COPY ./src/hello /hello
+COPY ./hello/* /hello
 # COPY . /hello
-# WORKDIR /hello
-# RUN gcc -o hello hello.c
-# CMD ["./hello"]
+WORKDIR /hello
+RUN gcc -o hello1 hello.c
+CMD ["./hello1"]

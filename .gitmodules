@@ -1,0 +1,3 @@
+[submodule "simple-server-node"]
+	path = simple-server-node
+	url = https://github.com/resin-io-projects/simple-server-node.git
