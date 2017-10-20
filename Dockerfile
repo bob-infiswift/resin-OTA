@@ -21,7 +21,5 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key D284E608A4C46402
 # COPY ./hello/*/hello
 COPY . /hello
 WORKDIR /hello
-RUN gcc -o hello1 app-hello/hello.c
-RUN gcc -o hello2 app-hello2/hello2.c
 CMD ["./hello1"]
 CMD ["./hello2"]
