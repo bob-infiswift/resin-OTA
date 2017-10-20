@@ -18,7 +18,10 @@ RUN echo "deb [arch=armhf] http://repos.rcn-ee.net/debian/ jessie main" >> /etc/
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key D284E608A4C46402
 
-COPY . /hello
-WORKDIR /hello
-CMD ["/hello/hello1"]
-CMD ["/hello/hello2"]
+# Enable init systemd
+ENV INITSYSTEM on
+
+COPY . /infiswift
+WORKDIR /infiswift
+CMD ["/infiswift/hello1"]
+CMD ["/infiswift/hello2"]
