@@ -3,7 +3,6 @@ FROM resin/armv7hf-debian:jessie
 LABEL io.resin.device-type="beaglebone-green-wifi"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-		build-essential \
 		less \
 		kmod \
 		nano \
@@ -20,6 +19,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key D284E608A4C46402
 
 COPY . /infiswift
 WORKDIR /infiswift
+RUN apt-get update && apt-get install -y build-essential
 RUN gcc -o hello1 app-hello/hello.c
 RUN gcc -o hello2 app-hello2/hello2.c
 CMD ["./hello1"]
