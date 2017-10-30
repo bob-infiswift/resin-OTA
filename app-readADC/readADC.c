@@ -36,6 +36,7 @@ int main(int argc, char *argv[])
 
     //Enable ADC pins within code
     system("echo BB-ADC > /sys/devices/platform/bone_capemgr/slots");
+    sleep(1); //Wait time to enable ABC
 
     while (1)
     {

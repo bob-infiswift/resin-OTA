@@ -26,4 +26,5 @@ WORKDIR /infiswift
 
 RUN gcc -o readADC app-readADC/readADC.c
 
-CMD ["./readADC 0"]
+#Default input to executable is 1 (Pin : P9_40)
+CMD ["./readADC", "1"]
